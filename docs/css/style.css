@@ -1,0 +1,7 @@
+/* ドット絵がボヤけるのを防ぎ、クッキリ表示させる魔法のコード */
+img {
+    image-rendering: pixelated; /* ブラウザでの補完を無効化 */
+    image-rendering: crisp-edges;
+    width: 100%; /* 必要に応じてサイズ調整 */
+    max-width: 400px; /* 例えば、大きく表示したい場合 */
+  }
