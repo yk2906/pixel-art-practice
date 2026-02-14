@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     const gallery = document.getElementById('gallery');
-    const totalImages = 2; 
+    const totalImages = 100; 
   
     for (let i = 1; i <= totalImages; i++) {
       const card = document.createElement('div');
