@@ -1,7 +1,67 @@
-/* ドット絵がボヤけるのを防ぎ、クッキリ表示させる魔法のコード */
-img {
-    image-rendering: pixelated; /* ブラウザでの補完を無効化 */
+/* 全体の設定 */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f4f7; /* 少し落ち着いた背景色 */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* ギャラリーのグリッド設定 */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 自動で横並び・折り返し */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* 作品カードのデザイン */
+  .art-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .art-card:hover {
+    transform: translateY(-5px); /* マウスホバーで少し浮く */
+  }
+  
+  /* ドット絵の設定 */
+  .art-card img {
+    image-rendering: pixelated;
     image-rendering: crisp-edges;
-    width: 100%; /* 必要に応じてサイズ調整 */
-    max-width: 400px; /* 例えば、大きく表示したい場合 */
+    width: 100%;
+    height: auto;
+    display: block;
+    background-image: 
+      linear-gradient(45deg, #eee 25%, transparent 25%), 
+      linear-gradient(-45deg, #eee 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #eee 75%), 
+      linear-gradient(-45deg, transparent 75%, #eee 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px; /* 透明なドット絵用の市松模様背景 */
+  }
+  
+  /* 説明テキスト */
+  .info {
+    padding: 15px;
+  }
+  
+  .info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+  }
+  
+  .info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
   }
