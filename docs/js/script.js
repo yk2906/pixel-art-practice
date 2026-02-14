@@ -1,5 +1,5 @@
 const gallery = document.getElementById('gallery');
-const totalImages = 5; // ここに今の合計枚数を書くだけ！
+const totalImages = 2; // ここに今の合計枚数を書くだけ！
 
 for (let i = 1; i <= totalImages; i++) {
   const card = document.createElement('div');
